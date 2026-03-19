@@ -4,9 +4,15 @@
   "settings": {
     "width": 2000,
     "height": 2000,
+<<<<<<< HEAD
     "scrollTop": -24.1832,
     "scrollLeft": -23.0237,
     "zoomLevel": 1,
+=======
+    "scrollTop": -162.0015,
+    "scrollLeft": -169,
+    "zoomLevel": 0.79,
+>>>>>>> 0247b13ae2ce6d2e12a06ac371da90076f7b6dee
     "show": 431,
     "database": 4,
     "databaseName": "",
@@ -92,15 +98,15 @@
           "Vf6kcV1sNklr2CmlI4iAX"
         ],
         "ui": {
-          "x": 468.3014,
-          "y": 41.6575,
+          "x": 488.5546,
+          "y": 23.936,
           "zIndex": 2,
           "widthName": 60,
           "widthComment": 60,
           "color": ""
         },
         "meta": {
-          "updateAt": 1772528323734,
+          "updateAt": 1773733733934,
           "createAt": 1770716203339
         }
       },
@@ -247,7 +253,7 @@
           "nj2PuR_6nTiM_wvyuOQsW"
         ],
         "ui": {
-          "x": 7.9589,
+          "x": 0.3641,
           "y": 368.3836,
           "zIndex": 469,
           "widthName": 60,
@@ -255,7 +261,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1772528327629,
+          "updateAt": 1773733729254,
           "createAt": 1772528222507
         }
       },
@@ -1238,8 +1244,8 @@
           "columnIds": [
             "I7bpyo9P6O1p0pgEkUI8h"
           ],
-          "x": 875.3014000000001,
-          "y": 237.6575,
+          "x": 895.5545999999999,
+          "y": 219.936,
           "direction": 2
         },
         "end": {
@@ -1303,8 +1309,8 @@
           "columnIds": [
             "WJ6Am804L2uxiGqIKNw5z"
           ],
-          "x": 671.8014000000001,
-          "y": 433.6575,
+          "x": 692.0545999999999,
+          "y": 415.936,
           "direction": 8
         },
         "meta": {
@@ -1322,7 +1328,7 @@
           "columnIds": [
             "E26TEj6LRGTXqbaUD4uWL"
           ],
-          "x": 408.95889999999997,
+          "x": 401.3641,
           "y": 420.3836,
           "direction": 2
         },
@@ -1331,8 +1337,8 @@
           "columnIds": [
             "x6_UJw6dgspnOM1tDfz9p"
           ],
-          "x": 468.3014,
-          "y": 237.6575,
+          "x": 488.5546,
+          "y": 219.936,
           "direction": 1
         },
         "meta": {
