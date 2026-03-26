@@ -21,7 +21,7 @@ class Connect():
             port = 3306,
             user = "admin",
             password = "admin",            
-            database = "webshop"
+            database = "beastbuilder"
         )
         
         

@@ -1,0 +1,13 @@
+import os
+import sys
+import mysql.connector
+
+
+from classes.oefening import *
+import classes.dbconfig as db
+
+
+mydb = db.Connect()
+
+lijstoef= Oefening.lijst_oefeningen(mydb)
+print(lijstoef)

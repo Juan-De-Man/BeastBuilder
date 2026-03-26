@@ -3,11 +3,22 @@ import sys
 import mysql.connector
 
 
-import classes.klant as kla
+from classes.klant import *
 import classes.dbconfig as db
 
 
 mydb = db.Connect()
 
-myKlant = kla.get_by_naam(mydb,'Jola%')
+myKlant = Klant.get_by_naam(mydb,'De Coster')
 print (myKlant)
+
+
+myKlant.change_pw(mydb,'99')
+
+print(myKlant)
+
+myKlant = Klant.lijst_klanten(mydb)
+print(myKlant)
+
+myKlant = Klant.get_by_id(mydb,2)
+print(myKlant)

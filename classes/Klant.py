@@ -19,12 +19,17 @@ class Klant():
 
     #Weergeven van de gegevens(representen)
     def __repr__(self):
-        return f'Klant(lidnr={self.lidnr},voornaam={self.vnaam},\
-            naam={self.naam},geboortejaar={self.geboortejaar},telefoonnummer={self.telnummer},gewicht={self.gewicht},\
-            lengte={self.lengte},lidstart={self.lidstart},lidstop={self.lidstop},huisnummer={self.huisnummer},email={self.email})'
-    
+        return (
+        f"klant(lidnr={self.lidnr}, voornaam={self.vnaam}, "
+        f"naam={self.naam}, geboortejaar={self.geboortejaar}, "
+        f"telefoonnummer={self.telnummer}, gewicht={self.gewicht}, "
+        f"lengte={self.lengte}, lidstart={self.lidstart}, "
+        f"lidstop={self.lidstop}, huisnummer={self.huisnummer}, "
+        f"email={self.email}, passwoord={self.passwoord})"
+    )
+
     def get_by_naam (the_db,naam):
-        sqltxt = "SELECT lidnr, naam, passwoord, email FROM klant WHERE naam like %s"
+        sqltxt = "SELECT lidnr, vnaam, naam, geboortejaar, telnummer, gewicht, lengte, lidstart, lidstop, straat, huisnummer, email, passwoord FROM klant WHERE naam like %s"
         mycursor = the_db.cursor()
         mycursor.execute(sqltxt,(naam,))
         result = mycursor.fetchone()
@@ -33,13 +38,32 @@ class Klant():
             return Klant(*result)
         else:
             return None
-
-
-
-    def change_pw(the_db,naam,pw):
-        sqltxt = "UPDATE klant SET passwoord = %s WHERE naam = %s"
+        
+    def get_by_id (the_db,lidnr):
+        sqltxt = "SELECT lidnr, vnaam, naam, geboortejaar, telnummer, gewicht, lengte, lidstart, lidstop, straat, huisnummer, email, passwoord FROM klant WHERE lidnr like %s"
         mycursor = the_db.cursor()
-        mycursor.execute(sqltxt,(pw,naam))
+        mycursor.execute(sqltxt,(lidnr,))
+        result = mycursor.fetchone()
+        mycursor.close()
+        if result:
+            return Klant(*result)
+        else:
+            return None
+
+
+    def lijst_klanten(the_db):
+        sqltxt ='SELECT lidnr, vnaam, naam, geboortejaar, telnummer, gewicht, lengte, lidstart, lidstop, straat, huisnummer, email, passwoord FROM klant'
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt,)
+        result = mycursor.fetchall()
+        mycursor.close()
+        return[Klant(*row) for row in result]
+
+    def change_pw(self,the_db,pw):
+        sqltxt = "UPDATE klant SET passwoord = %s WHERE lidnr = %s"
+        self.passwoord = pw
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt,(pw,self.lidnr))
         the_db.mydb.commit()
         mycursor.close()
 
