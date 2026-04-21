@@ -1,6 +1,8 @@
 import mysql.connector
 from classes.dbconfig import Connect
 
+# klasse voor oefeningen
+
 class Oefening:
     def __init__(self,oefnr=None, naam = None,spier=None, moeilijkheidsgraad= None, beschrijving =None, instructie= None):
         self.oefnr = oefnr
