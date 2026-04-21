@@ -21,3 +21,24 @@ class Oefening:
         mycursor.close()
         return[Oefening(*row) for row in result]
     
+    def get_by_nr(the_db,oefnr):
+        sqltxt = "SELECT oefnr, naam, spier, moeilijkheidsgraad, beschrijving, instructie FROM oefening WHERE oefnr like %s"
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt,(oefnr,))
+        result = mycursor.fetchone()
+        mycursor.close()
+        if result:
+            return Oefening(*result)
+        else:
+            return None
+        
+    def get_by_moeilijkheidsgraad(the_db, moeilijkheidsgraad):
+        sqltxt ='Select oefnr, naam, spier, moeilijkheidsgraad, beschrijving, instructie from oefening where moeilijkheidsgraad like %s'
+        mycursor = the_db.cursor()
+        mycursor.execute(sqltxt,(moeilijkheidsgraad,))
+        result = mycursor.fetchall()
+        mycursor.close()
+        return[Oefening(*row) for row in result]
+ 
+
+    

@@ -11,3 +11,9 @@ mydb = db.Connect()
 
 lijstoef= Oefening.lijst_oefeningen(mydb)
 print(lijstoef)
+
+eennummer= Oefening.get_by_nr(mydb,101)
+print(eennummer)
+
+moeilijkheids = Oefening.get_by_moeilijkheidsgraad(mydb,20)
+print (moeilijkheids)

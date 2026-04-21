@@ -3,5 +3,7 @@ class Gemeente:
         self.naam = naam
         self.postcode = postcode
     
-    def __str__(self):
+    def __repr__(self):
         return f"{self.naam} ({self.postcode})"
+    
+    

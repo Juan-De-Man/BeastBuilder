@@ -1,6 +1,7 @@
 class Ervaring:
-    def __init__(self, ervaringsgraad):
+    def __init__(self, ervaringsgraad,naam):
         self.ervaringsgraad = ervaringsgraad
+        self.naam = naam
 
-    def __str__(self):
-        return f"Ervaringsgraad: {self.ervaringsgraad}"
+    def __repr__(self):
+        return f"Ervaringsgraad: {self.ervaringsgraad} Naam: {self.naam}"
