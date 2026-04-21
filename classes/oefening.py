@@ -1,6 +1,13 @@
-class Oefening:
-    def __init__(self, spier):
+class oefening():
+    def __init__(self,spier=None,instructie=None,beschrijving=None):
         self.spier = spier
+        self.instructie = instructie
+        self.beschrijving = beschrijving
 
-    def __str__(self):
-        return f"Spier: {self.spier}"
+    def __repr__(self):
+        return f'Oefening={self.spier}, Instructie={self.instructie}, Beschrijving= {self.beschrijving}'
+    
+    
+    
+
+        
