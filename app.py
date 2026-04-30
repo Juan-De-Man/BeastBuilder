@@ -29,4 +29,5 @@ register_blueprints(app)
 # 
 # #by default: http://localhost:5000/
 # starten als:
-# flask --app app run --debug
+# flask --app app run --debug (niet gebruiken, gebruik deze hieronder:)
+# flask --app "c:\Users\ArjunaVeldhuizen\OneDrive - Instituut Zusters Maricolen\BOIW\BeastBuilder\app.py" run --debug

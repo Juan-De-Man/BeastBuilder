@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
     {% block head %} {% endblock %}   <!-- dit is Jinja code om een blok te definiëren, Flask gebruikt de Jinja in de template generator  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="/static/css/aos.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="/static/css/tooplate-gymso-style.css">
+<!--
+Tooplate 2119 Gymso Fitness
+https://www.tooplate.com/view/2119-gymso-fitness
+-->
+
+
+
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
     {% block body %} {% endblock %}   <!-- blok voor body -->
 </body>
 </html>
